@@ -9,7 +9,7 @@ public class Orbit_Behaviour : MonoBehaviour
     public float yOffset; //Camera offset
     public Transform centerPoint;
 
-    public float rotSpeed; //Rotation speed
+    public float numOfYears; //Rotation speed
     public bool rotateClockwise;
 
     float timer = 0;
@@ -17,7 +17,7 @@ public class Orbit_Behaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        timer += Time.deltaTime + rotSpeed;
+        timer += (Time.deltaTime) * (1/numOfYears);
         Rotate();
         transform.LookAt(centerPoint);
     }
