@@ -1,7 +1,7 @@
 # Mission_Control_Project
 Basic Misison Control in Unity, Inspired by PIGI
 
-
+![Example Image](www)
 
 
 Features:
@@ -12,5 +12,5 @@ Features:
 TODO:
 - [ ] Load planet ephemeris and add to system
 - [ ] load in some TLEs 
-- [x] Implementent / find library for SGP4 / SDP4 model -- [link] (http://www.zeptomoby.com/satellites/)
+- [x] Implementent / find library for SGP4 / SDP4 model -- [link](http://www.zeptomoby.com/satellites/)
 - [ ] Visualise TLE data with a satellite 
