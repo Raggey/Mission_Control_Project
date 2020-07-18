@@ -10,7 +10,7 @@ Features:
 
 
 TODO:
-- Load planet ephemeris and add to system
-- load in some TLEs 
-- Implementent / find library for SPG4 model
-- Visualise TLE data with a satellite 
+- [ ] Load planet ephemeris and add to system
+- [ ] load in some TLEs 
+- [x] Implementent / find library for SGP4 / SDP4 model -- [link] (http://www.zeptomoby.com/satellites/)
+- [ ] Visualise TLE data with a satellite 
