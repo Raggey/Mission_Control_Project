@@ -13,6 +13,6 @@ Features:
 TODO:
 - [ ] Load planet ephemeris and add to system
 - [ ] load in some TLEs 
-- [x] Implementent / find library for SGP4 / SDP4 model -- [link](http://www.zeptomoby.com/satellites/)
+- [ ] Implementent / find library for SGP4 / SDP4 model -- [link](http://www.zeptomoby.com/satellites/)
 - [ ] Visualise TLE data with a satellite 
 - [ ] Add a slider to speed up / slow orbits
