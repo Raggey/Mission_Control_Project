@@ -36,6 +36,7 @@ public class SS_HUD_Update : MonoBehaviour
     }
 
 
+
     IEnumerator GetRequest(string uri) {
         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri)) {
             // Request and wait for the desired page.
