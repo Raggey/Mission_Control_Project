@@ -10,6 +10,7 @@ public class Orbit_Behaviour : MonoBehaviour
     public Transform centerPoint;
 
     public float numOfYears; //Rotation speed
+    public float SliderMultiplier = 1; //HUD Slider
     public bool rotateClockwise;
 
     float timer = 0;
@@ -17,7 +18,7 @@ public class Orbit_Behaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        timer += (Time.deltaTime) * (1/numOfYears);
+        timer += ((Time.deltaTime) * (1/numOfYears)) * SliderMultiplier;
         Rotate();
         transform.LookAt(centerPoint);
     }
