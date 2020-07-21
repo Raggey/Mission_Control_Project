@@ -2817,14 +2817,12 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Basic Information:
-
-
-
-'
+  m_Text: "Basic Information:\n\nISS (ZARYA)             \r\n1 25544U 98067A   20203.16987269
+    -.00000534  00000-0 -14901-5 0  9999\r\n2 25544  51.6417 180.2692 0001349 136.6785 
+    32.3219 15.49514931237281"
 --- !u!222 &1815046760
 CanvasRenderer:
   m_ObjectHideFlags: 0
