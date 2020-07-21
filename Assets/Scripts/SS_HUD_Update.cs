@@ -12,7 +12,7 @@ public class SS_HUD_Update : MonoBehaviour
     void Start() {
 
         // A correct website page.
-        StartCoroutine(GetRequest("https://www.example.com"));
+        StartCoroutine(GetRequest("https://celestrak.com/NORAD/elements/stations.txt"));
 
      
 
@@ -31,8 +31,8 @@ public class SS_HUD_Update : MonoBehaviour
 
 
     void UpdateText() {
-        ThisText.text = "Helloooooo";
-        targetTime = 5.0f; // reset the timer
+        // ThisText.text = "Helloooooo";
+        // targetTime = 5.0f; // reset the timer
     }
 
 
@@ -49,9 +49,24 @@ public class SS_HUD_Update : MonoBehaviour
                 Debug.Log(pages[page] + ": Error: " + webRequest.error);
             }
             else {
-                Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
+
+                byte[] bytes =  webRequest.downloadHandler.data;
+                string convert =  formatByteData(bytes);
+              
+                ThisText.text = convert;
             }
         }
+    }
+
+
+    string formatByteData(byte[] bytes){
+
+        string buff = System.Text.Encoding.UTF8.GetString(bytes);
+        string[] arr = buff.Split('\n');
+        // Just return the first 3 lines
+        string retVal = arr[0] + "\n " + arr[1] + "\n " + arr[2];
+
+        return retVal;
     }
 
 
