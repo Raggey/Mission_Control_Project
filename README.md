@@ -1,5 +1,5 @@
 # Mission_Control_Project
-Basic Misison Control in Unity, Inspired by PIGI
+Basic Mission Control in Unity, Inspired by PIGI
 
 ![Image 1](https://github.com/Raggey/Mission_Control_Project/blob/master/Scene_Image_1.png)
 ![Image 2](https://github.com/Raggey/Mission_Control_Project/blob/master/Scene_Image_2.png)
