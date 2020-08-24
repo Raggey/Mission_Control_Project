@@ -25,6 +25,9 @@ public class Orbit_Behaviour : MonoBehaviour
 
 
     void Rotate() {
+
+      
+
         if (rotateClockwise){
             float x = -Mathf.Cos(timer) * xSpread;
             float z = Mathf.Sin(timer) * zSpread;

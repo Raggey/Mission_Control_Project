@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class Orbit_Slider : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //TODO: Fix W + D changing mutlipler value
+
 
     public Slider orbitSlider;
     public Text orbitSliderText;
@@ -27,4 +29,7 @@ public class Orbit_Slider : MonoBehaviour
       }
         
     }
+
+    // display days elasped on screen
+    
 }
