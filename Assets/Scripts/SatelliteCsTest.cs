@@ -22,7 +22,8 @@ public class SatelliteCsTest : MonoBehaviour
     public double latitude;
 
     public tleFormat tle = new tleFormat();
-    
+
+    float targetTime = 1;
 
     void Start()
     {
@@ -39,6 +40,17 @@ public class SatelliteCsTest : MonoBehaviour
 
         // Display debug for now 
         
+    }
+
+    private void Update() {
+
+       targetTime -= Time.deltaTime; //Delta Time is time between last frame update? 
+
+      if (targetTime <= 0.0f) {
+        // Update the ISS coords
+        generateTle(line1,line2);
+      }
+      
     }
 
 
@@ -67,8 +79,6 @@ public class SatelliteCsTest : MonoBehaviour
 
           byte[] bytes =  webRequest.downloadHandler.data;
           Tuple <string, string> issTleText = tle.getIssTle(bytes);
-
-          // ThisText.text += issTleText;
 
           line1 = issTleText.Item1;
           line2 = issTleText.Item2;
