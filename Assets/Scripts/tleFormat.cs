@@ -1,9 +1,9 @@
-
+using System;
 
 public class tleFormat {
 
 
-    public string getIssTle(byte[] bytes){
+    public Tuple <string, string> getIssTle(byte[] bytes){
          // Just return the first 3 lines
         string buff = System.Text.Encoding.UTF8.GetString(bytes);
         string[] arr = buff.Split('\n');
@@ -13,8 +13,9 @@ public class tleFormat {
         int zaryaTLE2 = 2;
         string retVal = arr[zarya] + "\n " + arr[zaryaTLE1] + "\n " + arr[zaryaTLE2];
 
-
-        return retVal;
+        // var tleStrings = Tuple <string, string>;
+        return Tuple.Create(arr[zaryaTLE1],  arr[zaryaTLE2]);
+        
     }
 
 
