@@ -6,7 +6,7 @@ using System.Collections;
 public class SS_HUD_Update : MonoBehaviour
 {
     public Text ThisText;
-    public tleFormat tle = new tleFormat();
+    // public tleFormat tle = new tleFormat();
 
     public float targetTime = 5.0f; //  timer
 
@@ -43,11 +43,13 @@ public class SS_HUD_Update : MonoBehaviour
         else {
 
           byte[] bytes =  webRequest.downloadHandler.data;
-          string issTleText = tle.getIssTle(bytes);
+          // string issTleText = tle.getIssTle(bytes);
 
-          ThisText.text += issTleText;
+          // ThisText.text += issTleText;
         }
       }
+
+
     }
 
 
