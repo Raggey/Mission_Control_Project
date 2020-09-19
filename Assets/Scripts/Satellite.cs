@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class SatelliteCsTest : MonoBehaviour
+public class Satellite : MonoBehaviour
 {
     // Start is called before the first frame update
     private IEnumerator getRequest;
@@ -18,8 +18,8 @@ public class SatelliteCsTest : MonoBehaviour
 
     void Start() {
         // Load TLE Dynamically 
-        getRequest = GetRequest(celestTrack);
-        StartCoroutine(getRequest);
+        // getRequest = GetRequest(celestTrack);
+        // StartCoroutine(getRequest);
     }
 
     private void Update() {

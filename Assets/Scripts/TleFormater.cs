@@ -30,14 +30,11 @@ public class TleFormater {
 
         for(int i = 0; i+3 < arr.Length; i=i+3){
 
-          
-
           string satName = arr[i];
 
           if (satelliteList.ContainsKey(satName)) {
             continue; // fix for multiple ISS DEB.. TODO: check why
           }
-
 
           string satLine1 = arr[i+1];
           string satLine2 = arr[i+2];

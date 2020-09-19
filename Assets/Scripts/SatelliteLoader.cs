@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 public class SatelliteLoader : MonoBehaviour
 {
 
+    public GameObject satellitePrefab;
     private IEnumerator getRequest;
 
     public TleFormater tle = new TleFormater();
@@ -54,9 +55,33 @@ public class SatelliteLoader : MonoBehaviour
         
         // Create a dict of satellite objects
         satelliteList = tle.getSatelliteList(bytes);
+        createSatellitePrefabs(satelliteList);
 
       }
     }
+
+  }
+
+  public void createSatellitePrefabs(Dictionary <string, Satellite_cs.Satellite_cs> satelliteList){
+
+    foreach(KeyValuePair<string, Satellite_cs.Satellite_cs> entry in satelliteList){
+
+      GameObject newObj = Instantiate(satellitePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+      
+      newObj.name = entry.Key;
+
+      Debug.Log(entry.Value.line1);
+
+      newObj.GetComponent<Satellite>().line1 = entry.Value.line1;
+      newObj.GetComponent<Satellite>().line2 = entry.Value.line2;
+
+      // Satellite sat = newObj.GetComponent(typeof(Satellite)) as Satellite;
+
+      // sat.line1 = entry.Value.line1;
+      // sat.line2 = entry.Value.line2;
+
+    }
+
 
   }
 }
