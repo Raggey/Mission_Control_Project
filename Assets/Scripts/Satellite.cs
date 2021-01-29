@@ -18,8 +18,8 @@ public class Satellite : MonoBehaviour
 
     void Start() {
         // Load TLE Dynamically 
-        // getRequest = GetRequest(celestTrack);
-        // StartCoroutine(getRequest);
+        getRequest = GetRequest(celestTrack);
+        StartCoroutine(getRequest);
     }
 
     private void Update() {
